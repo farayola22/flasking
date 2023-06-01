@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog add post</title>
+    <link rel="icon" href="static/images/angel.svg" type="image/x-icon">
+    <style>
+        nav{
+            top: 0;
+            left: 0;
+            padding: 20px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        } 
+        body{
+            background-color: #000000;
+        }        
+
+        
+        .box{
+            text-align: center;
+            justify-content: center;
+            padding: 20px ;
+            background: #000000;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.17);
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+  
+        }
+        a:hover{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+        <h2 style="position: fixed; bottom: 10px; left: 10px; padding: 10px; border-radius: 5px; color: orange; font-size: small; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <div class="warning-message">
+                <p>
+                  Important Security Notice: Protect Your Data from Unauthorized Access
+                </p>
+                <p>
+                  Dear User,
+                </p>
+                <p>
+                  We want to bring your attention...
+                </p>
+                Secure Internet Connections: When accessing sensitive information or logging into your accounts, ensure that you are using a secure internet connection. Avoid using public Wi-Fi networks, as they can be vulnerable to data interception. Instead, use trusted networks or a virtual private network (VPN) for enhanced security.
+              </div>
+              </h2>
+       
+      
+    
+
+    <div>
+        <h2 style="color: green; font-family: cursive; text-align: center;">Welcome  {{profile.username}}</h2>
+    </div><br>
+    <div style="color: green; text-align: center;">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <b>{{ message }}</b>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div><br>
+    <div style="text-align: center;">
+        <a href="/add_new_product" style="text-decoration: none; color: orange; font-family: cursive;">Add a new post</a><br>
+        <a href="/logout" style="color: orange; font-family: cursive; text-decoration: none;">log out</a>
+    </div>
+    <div>
+        <h3 style="text-align: center;">Your Posts</h3>
+        {% for item in products %}
+  
+            <div class="box">
+                <p><b>{{item['category']}}</b>: {{item['title']}}</p>
+                <p>posted on {{item['created']}}</p>
+                <div >
+                    <img src="/uploads/{{item.image}}" style="height: 250px; max-width: 330px;">
+
+                    <p> {{item['description']}}</p>
+                    <div style="font-family: cursive">
+                        <a href="/edit/{{ item.id }}" style="text-decoration: none; color: orange;">Edit</button>
+                        <a href="/delete/{{ item.id }}" type="button" style="text-decoration: none; color: orange;">Delete</a><br><br>
+            
+
+                    </div>
+                </div>
+            </div>
+       
+        {% endfor %}
+    </div>
+    <footer>
+
+    </footer>
+
+     
+</body>
+</html>

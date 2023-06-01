@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="icon" href="static/images/angel.svg" type="image/x-icon">
+    <style>
+        .mes{
+            background-color: rgb(255, 123, 0);
+            color: rgb(255, 115, 0);
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 16px;
+            font-family: monospace;
+        }
+        nav{
+            top: 0;
+            left: 0;
+            padding: 20px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        div a:hover{
+            font-size: 17px;
+        }
+
+ 
+  </style>
+</head>
+<body>
+
+
+</body>
+    </style>
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+    <header>
+        <nav>
+        
+        </nav>
+    
+    
+    </header>
+    <h1 style="color: orange;">
+        Welcome to Dashboard
+    </h1>
+
+    <div class="mes">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <b>{{ message }}</b>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div><br>
+    <h3 style="text-align: center ; color: orange; font-family: cursive;">
+        Welcome {{profile.username}}
+    </h3>
+    <div style="padding: 0px 20px;">
+      <a href="/dashboard" style="text-decoration: none; font-family: cursive; color:orange ;">Dashboard</a><br><br>
+      <a href="/logout" style="text-decoration: none; font-family: cursive; color:orange ;">Log Out</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+venv/
+shop.db
+__pycache__/
+migrations/

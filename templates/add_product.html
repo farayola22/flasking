@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add post</title>
+    <link rel="icon" href="static/images/angel.svg" type="image/x-icon">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            justify-content: center;
+            
+        }
+
+        .form{
+            top: 75px;
+            width:320px;
+            height:285px;
+            padding: 25px;
+            align-items: center;
+            position: relative;
+            border-radius: 12px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8));
+            border: 1px solid orangered;
+            text-align: center;
+            justify-content: center;
+           
+        }
+        .form input{
+
+            width: 270px;
+            height: 19px;
+            background: transparent;
+            color: #fff;
+            font-size: 14px;
+            border-bottom: 1px solid orangered;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-bottom: 30px;
+            letter-spacing: 0.85px;
+        }
+        .form .text{
+            height: 80px;
+            width: 270px;
+            max-width: 300px;
+            max-height: 85px;
+            min-width: 265px;
+            min-height: 75px;
+            border: 2px solid orangered;
+            background: transparent;
+            color: #fff;
+
+        }
+        .btn2{
+         
+            width: 70px;
+            height: 30px;
+            color: white;
+            border: none;
+            background-color: rgb(197, 97, 61);
+            border-radius: 11px;
+
+        }
+        .btn2:hover{
+            width: 74px;
+            height: 33px;
+            background-color: rgb(198, 88, 56);
+            box-shadow: 0px 0px 25px rgba(205, 95, 55, 0.857);
+        }
+    </style>
+</head>
+
+
+<body style="background-color: black; display: flex;">
+    
+    <div class="main">
+        <h2 style="text-align:center; font-family: Franklin Gothic Medium; font-size: 30px; color: orange;">Add a post</h2>
+
+        <div style="color: red; text-align: center;">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <b>{{ message }}</b>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        
+        <form action="/add_product" method="post"  enctype="multipart/form-data" class="form">
+            <input type="text" name="title" placeholder="Enter title" >
+            <br/>
+            <input type="text" name="category"  placeholder="Enter category e.g sport, music..." >
+            <br/>
+            <textarea name="description" placeholder="Enter Post" class="text"></textarea>
+            <br/><br>
+            <input type="file" name="picture" >
+            <br/>
+            <button type="submit" class="btn2">Post</button>
+        
+        </form>
+    </div>
+</body>
+</html>

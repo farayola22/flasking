@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post about</title>
+    <link rel="icon" href="static/images/rugby ball.jpg" type="image/x-icon">
+    <style>
+        nav{
+            top: 0;
+            left: 0;
+            padding: 20px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+            nav ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 20px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #111;
+            font-family: 'Lucida Sans';
+            font-size: 14px;
+            font-weight: 600;
+        }
+        nav ul li a:hover{
+            color: orangered;
+        }
+
+        .box{
+            text-align: center;
+            justify-content: center;
+            padding: 20px ;
+            background: #fff;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.17);
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+  
+        }
+    </style>
+</head>
+<body style="background-color: orange;">
+    <header>
+        <nav>
+          
+          <ul>
+              <li><a href="home">HOME</a></li>
+              <li><a href="contact">CONTACT</a></li>
+          </ul>
+        </nav>
+    
+    
+    </header>
+    
+
+
+    <h2 style="text-align: center; ">NAMES BELOW ARE THE WINNERS OF THIS WEEK EPON WARMER<br>
+       <p><h3 style="text-align: center;">Giannis Wesley</h3>
+        <h3 style="text-align: center;">Tobey Maguire</h3>
+        </p><h3 style="text-align: center;">Robin Dickieslong</h3></p>
+        <p></p><h3 style="text-align: center;">Ivan Red</h3></p>
+        <p><h3 style="text-align: center;">Folake Gimmielove</h3></p>
+        <p></p><h3 style="text-align: center;">Joe alfred</h3></p>
+        <p><h3 style="text-align: center;">David Favor</h3></p>
+    
+
+
+        <h1 style="font-family: cursive; text-align: center;"> To win an EPON WARMER foward our link to ur homophobic friends</h1>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </h2>
+        {% for item in products %}
+  
+            <div class="box">
+                <p><b>{{item['category']}}</b>: {{item['title']}}</p>
+                <p>posted on {{item['created']}} </p>
+                <div >
+                    <img src="/uploads/{{item.image}}" style="height: 250px;">
+
+                    <p>{{item['description']}}</p>
+                </div>
+            </div>
+       
+        {% endfor %}
+</body>
+</html>

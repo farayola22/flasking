@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h3>delete product</h3>
+        <form action="/delete/{{product.id}}" method="post">
+            <input type="text" name="title" class="form-control" placeholder="Enter title" value="{{product.title}}">
+            <br/>
+            <input type="number" name="price" class="form-control" placeholder="Enter price" value="{{product.price}}">
+            <br/>
+            <input type="text" name="category" class="form-control" placeholder="Enter category" value="{{product.category}}">
+            <br/>
+            <textarea name="description" class="form-control" rows="3">{{product.description}}</textarea>
+            <br/>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        
+        </form>
+    </div>
+</body>
+</html>

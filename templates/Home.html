@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+  
+  <link rel="icon" href="static/images/angel.svg" type="image/x-icon">
+
+</head>
+
+<body>
+  <header id="header">
+    <div class="container ">
+     <h1 style="position: fixed; top: 50x; left: 10px;">Blitz Updates</h1> 
+      
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/home">Home</a></li>
+
+          <li class="dropdown"><a href="#"><span>Categories</span> </a>
+            <ul>
+              <li><a href="post">giveaway winners</a></li>
+              <li><a href="post">Music</a></li>
+              <li><a href="post">Business</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/login">LogIn</a></li>
+          <li><a href="/contact">Contact</a></li>
+
+        </ul>
+
+      </nav>
+      <div class="header-social-links">
+        <a href="contact"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="contact"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="contact"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="contact"><ion-icon name="logo-linkedin"></ion-icon></a>
+      </div>
+    </div>
+  </header><br><br>
+
+  <div style="color: green; text-align: center;">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <b>{{ message }}</b>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+  </div>
+  
+  <section id="blog">
+    <div class="head">
+        <span>Recent Posts</span>
+        <h3>Blog</h3>
+    </div>
+     <br>
+      </div>
+    </div>
+
+    
+  </section>
+  <h1 style="color: orange; text-align: center; font-size: 15px; margin-left: 150px; margin-right: 150px;">Groundbreaking Testicle Transplant Performed on Young Man in Los Angeles
+  <p>
+    Los Angeles, CA - In a remarkable medical breakthrough, a team of skilled surgeons at a leading hospital in Los Angeles successfully performed a testicle transplant on a young man, marking a significant milestone in the field of reproductive medicine. The groundbreaking procedure offers hope for individuals who have experienced testicular loss and opens new possibilities for enhancing fertility and quality of life.
+  </p>
+  <p>
+    The intricate surgery took place at the renowned Los Angeles Medical Center, where a multidisciplinary team of surgeons, urologists, and microsurgery specialists collaborated to carry out the testicle transplant. The patient, a 28-year-old man who had lost one of his testicles due to a previous injury, had been living with the physical and emotional consequences of testicular loss.
+  </p>
+  <p>
+    Under the guidance of lead surgeon Dr. Samantha Collins, the transplant procedure utilized advanced microsurgical techniques to meticulously graft a healthy testicle from a deceased donor to the recipient. The intricate connections of blood vessels and tissues were established to ensure proper blood flow and viability of the transplanted organ.
+  </p>
+  <p>
+    The successful surgery not only restored the patient's physical appearance but also holds the potential for restoring hormonal balance and improving fertility. The transplanted testicle will enable the young man to regain normal testosterone production, potentially addressing any hormonal imbalances he may have experienced.
+  </p>
+  <p>
+    Dr. Collins expressed her enthusiasm about the procedure, stating, "This testicle transplant represents a significant milestone in reproductive medicine. It offers hope to individuals who have lost a testicle and may have experienced psychological, emotional, and physical challenges as a result."
+  </p>
+  <p>
+    While the surgery itself was a triumph, medical experts emphasize the importance of long-term monitoring and follow-up care to ensure the patient's well-being and to assess the success of the transplant. The medical team will closely monitor hormone levels, assess fertility potential, and provide ongoing support to address any concerns that may arise.
+  </p>
+  <p>
+    This breakthrough procedure in Los Angeles underscores the continuous advancements in reproductive medicine and the growing possibilities for enhancing quality of life through innovative surgical techniques. Testicle transplantation offers renewed hope for individuals.
+  </p>
+  </h1>
+  <h2 style="text-align: center;"><img src="static/images/druggs.jpg" alt="" width="300px"></h2>
+  <h1 style="color: orange; text-align: center; font-size: 15px; margin-left: 150px; margin-right: 150px;">
+    <p>
+      Testicle replacement, also known as testicle transplant or testicular prostheses, is a surgical procedure that aims to restore the appearance and function of a missing or damaged testicle. It is primarily performed on individuals who have lost a testicle due to injury, illness, or congenital conditions.
+    </p>
+    <p>
+      The testicle transplant procedure involves grafting a healthy testicle from a donor to the recipient. Advanced microsurgical techniques are employed to connect blood vessels, tissues, and other structures to ensure proper blood flow and viability of the transplanted organ.
+    </p>
+    <p>
+      Testicle replacement surgeries can have various benefits for the recipients. Apart from restoring physical symmetry, they can also help address psychological and emotional challenges associated with testicular loss. The transplanted testicle can potentially restore hormonal balance and improve fertility by allowing the production of normal levels of testosterone and other reproductive hormones.
+    </p>
+    <p>
+      It is important to note that testicle replacement surgeries are complex procedures that require a skilled surgical team and meticulous post-operative care. Patients undergo thorough medical evaluation and counseling before the surgery to ensure their eligibility and to discuss the potential risks and benefits.
+    </p>
+    <p>
+      The success of a testicle transplant depends on various factors, including the expertise of the surgical team, compatibility between the donor and recipient, and the overall health of the patient. Long-term monitoring and follow-up care are crucial to assess the function and viability of the transplanted testicle, monitor hormone levels, and address any potential complications or concerns that may arise.
+    </p>
+    <p>
+      The groundbreaking testicle transplant performed on the young man in Los Angeles represents a significant advancement in reproductive medicine. It not only offers hope for individuals who have experienced testicular loss but also paves the way for further research and advancements in the field.
+    </p>
+  </h1>
+  <h2 style="text-align: center;"><img src="static/images/testicle.jpg" alt="" width="300px"></h2>
+  </h1>
+
+  <a href="#" class="back-to-top"><i>^^</i></a>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
